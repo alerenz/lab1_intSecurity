@@ -35,10 +35,10 @@ public class ReadBitsTask extends SwingWorker<Void, String> {
 
     @Override
     protected void done() {
-        System.out.println("Последовательность готова");
+        InputTestPanel.bitsSeq = result.getText();
     }
 
-    // функция чтения из файла последоватльности битов
+   
 //    private String readBitSequence()  {
 //        StringBuilder result = new StringBuilder();
 //        try (FileReader reader = new FileReader("bits.txt")) {
