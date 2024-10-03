@@ -27,14 +27,14 @@ public class FrequenceTestPanel extends JPanel {
 
 
         JLabel nameTest = new JLabel();
-        nameTest.setText("Частотный тест");
+        nameTest.setText("Р§Р°СЃС‚РѕС‚РЅС‹Р№ С‚РµСЃС‚");
         nameTest.setForeground(MainFrame.cText);
         nameTest.setFont(new java.awt.Font("TimesRoman", Font.BOLD, 24));
         nameTest.setBounds((int) MainFrame.screen[0]/4 - 100,30,
                 (int) MainFrame.screen[0]/4, 40);
         add(nameTest);
 
-        JButton startTestBut = new JButton("Запустить");
+        JButton startTestBut = new JButton("Р—Р°РїСѓСЃС‚РёС‚СЊ");
         startTestBut.setFont(new java.awt.Font("TimesRoman", Font.PLAIN, 16));
         startTestBut.setBorder(BorderFactory.createLineBorder(MainFrame.cBorders,1));
         startTestBut.setBackground(MainFrame.cBackBut);
@@ -44,7 +44,7 @@ public class FrequenceTestPanel extends JPanel {
         add(startTestBut);
 
         textStat = new JLabel();
-        textStat.setText("Статистика теста = ");
+        textStat.setText("РЎС‚Р°С‚РёСЃС‚РёРєР° С‚РµСЃС‚Р° = ");
         textStat.setForeground(MainFrame.cText);
         textStat.setFont(new java.awt.Font("TimesRoman", Font.PLAIN, 24));
         textStat.setBounds((int) MainFrame.screen[0]/6 - (int) MainFrame.screen[0]/18,
@@ -60,7 +60,7 @@ public class FrequenceTestPanel extends JPanel {
         answer.setBounds((int) MainFrame.screen[0]/3 - (int) MainFrame.screen[0]/18 - 30 ,(int) MainFrame.screen[1]/2 - 150,
                 (int) MainFrame.screen[0]/3, 40);
 
-        butCont = new JButton("Далее");
+        butCont = new JButton("Р”Р°Р»РµРµ");
         butCont.setFont(new java.awt.Font("TimesRoman", Font.PLAIN, 18));
         butCont.setBorder(BorderFactory.createLineBorder(MainFrame.cBorders,1));
         butCont.setBackground(MainFrame.cBackBut);
@@ -68,7 +68,7 @@ public class FrequenceTestPanel extends JPanel {
         butCont.setBounds( (int) MainFrame.screen[0]/4 - 50, (int) MainFrame.screen[1]/2 + 160,
                 (int) MainFrame.screen[0]/16, 40);
 
-        butBack = new JButton("Начать заного");
+        butBack = new JButton("РќР°С‡Р°С‚СЊ Р·Р°РЅРѕРіРѕ");
         butBack.setFont(new java.awt.Font("TimesRoman", Font.PLAIN, 18));
         butBack.setBorder(BorderFactory.createLineBorder(MainFrame.cBorders,1));
         butBack.setBackground(MainFrame.cBackBut);
@@ -96,11 +96,11 @@ public class FrequenceTestPanel extends JPanel {
                 add(textStat);
                 add(answer);
                 if (check){
-                    textAns.setText("Тест пройден!");
+                    textAns.setText("РўРµСЃС‚ РїСЂРѕР№РґРµРЅ!!");
                     add(textAns);
                     add(butCont);
                 }else{
-                    textAns.setText("Тест завален!");
+                    textAns.setText("РўРµСЃС‚ Р·Р°РІР°Р»РµРЅ!!");
                     add(textAns);
                     add(butBack);
                 }
@@ -137,7 +137,6 @@ public class FrequenceTestPanel extends JPanel {
         });
 
     }
-    // Функция перевода из строки в число
     public static void stringToInt(String str){
         String [] chars = str.split(" ");
         sequence = new int[chars.length];
@@ -146,7 +145,6 @@ public class FrequenceTestPanel extends JPanel {
         }
     }
 
-    // Частотный тест
     public static String frequenceTest(){
         double [] seq = new double[sequence.length];
         double sum = 0;
