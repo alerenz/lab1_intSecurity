@@ -22,14 +22,14 @@ public class SequenceOgIdenticalBitsPanel extends JPanel {
         setBackground(MainFrame.cFon);
 
         JLabel nameTest = new JLabel();
-        nameTest.setText("Тест на последовательность одинаковых бит");
+        nameTest.setText("РўРµСЃС‚ РЅР° РїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕСЃС‚СЊ РѕРґРёРЅР°РєРѕРІС‹С… Р±РёС‚");
         nameTest.setForeground(MainFrame.cText);
         nameTest.setFont(new java.awt.Font("TimesRoman", Font.BOLD, 24));
         nameTest.setBounds((int) MainFrame.screen[0]/8 - 100,30,
                 (int) MainFrame.screen[0]/2, 40);
         add(nameTest);
 
-        JButton startTestBut = new JButton("Запустить");
+        JButton startTestBut = new JButton("Р—Р°РїСѓСЃС‚РёС‚СЊ");
         startTestBut.setFont(new java.awt.Font("TimesRoman", Font.PLAIN, 16));
         startTestBut.setBorder(BorderFactory.createLineBorder(MainFrame.cBorders,1));
         startTestBut.setBackground(MainFrame.cBackBut);
@@ -39,7 +39,7 @@ public class SequenceOgIdenticalBitsPanel extends JPanel {
         add(startTestBut);
 
         textStat = new JLabel();
-        textStat.setText("Статистика теста = ");
+        textStat.setText("РЎС‚Р°С‚РёСЃС‚РёРєР° С‚РµСЃС‚Р° = ");
         textStat.setForeground(MainFrame.cText);
         textStat.setFont(new java.awt.Font("TimesRoman", Font.PLAIN, 24));
         textStat.setBounds((int) MainFrame.screen[0]/6 - (int) MainFrame.screen[0]/18,
@@ -55,7 +55,7 @@ public class SequenceOgIdenticalBitsPanel extends JPanel {
         answer.setBounds((int) MainFrame.screen[0]/3 - (int) MainFrame.screen[0]/18 - 30 ,(int) MainFrame.screen[1]/2 - 150,
                 (int) MainFrame.screen[0]/3, 40);
 
-        butCont = new JButton("Далее");
+        butCont = new JButton("Р”Р°Р»РµРµ");
         butCont.setFont(new java.awt.Font("TimesRoman", Font.PLAIN, 18));
         butCont.setBorder(BorderFactory.createLineBorder(MainFrame.cBorders,1));
         butCont.setBackground(MainFrame.cBackBut);
@@ -63,7 +63,7 @@ public class SequenceOgIdenticalBitsPanel extends JPanel {
         butCont.setBounds( (int) MainFrame.screen[0]/4 - 50, (int) MainFrame.screen[1]/2 + 160,
                 (int) MainFrame.screen[0]/16, 40);
 
-        butBack = new JButton("Начать заного");
+        butBack = new JButton("РќР°С‡Р°С‚СЊ Р·Р°РЅРѕРіРѕ");
         butBack.setFont(new java.awt.Font("TimesRoman", Font.PLAIN, 14));
         butBack.setBorder(BorderFactory.createLineBorder(MainFrame.cBorders,1));
         butBack.setBackground(MainFrame.cBackBut);
@@ -89,11 +89,11 @@ public class SequenceOgIdenticalBitsPanel extends JPanel {
                 add(textStat);
                 add(answer);
                 if (check){
-                    textAns.setText("Тест пройден!");
+                    textAns.setText("РўРµСЃС‚ РїСЂРѕР№РґРµРЅ!");
                     add(textAns);
                     add(butCont);
                 }else{
-                    textAns.setText("Тест завален!");
+                    textAns.setText("РўРµСЃС‚ Р·Р°РІР°Р»РµРЅ!");
                     add(textAns);
                     add(butBack);
                 }
@@ -129,7 +129,7 @@ public class SequenceOgIdenticalBitsPanel extends JPanel {
         });
 
     }
-    // Тест на последовательность одинаковых бит
+
     public static String sequenceOfIdenticalBits(){
         double sum = 0;
         double freq;
