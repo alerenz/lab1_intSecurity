@@ -30,7 +30,7 @@ public class InputTestPanel extends JPanel {
         setBackground(MainFrame.cFon);
 
         JLabel text1 = new JLabel();
-        text1.setText("Введите число не меньше 10000: ");
+        text1.setText("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ РЅРµ РјРµРЅСЊС€Рµ 10000: ");
         text1.setFont(new java.awt.Font("TimesRoman", Font.BOLD, 16));
         text1.setBounds(130,20,(int) MainFrame.screen[0]/6+40,20);
         text1.setForeground(MainFrame.cText);
@@ -43,7 +43,7 @@ public class InputTestPanel extends JPanel {
                 (int) MainFrame.screen[0]/12,(int) MainFrame.screen[1]/32);
         add(inpField);
 
-        JButton butInp = new JButton("Ввод");
+        JButton butInp = new JButton("Р’РІРѕРґ");
         butInp.setFont(new java.awt.Font("TimesRoman", Font.PLAIN, 16));
         butInp.setBorder(BorderFactory.createLineBorder(MainFrame.cBorders,1));
         butInp.setBackground(MainFrame.cBackBut);
@@ -61,13 +61,13 @@ public class InputTestPanel extends JPanel {
 
 
         textGen = new JLabel();
-        textGen.setText("Последовательность сгенерирована!");
+        textGen.setText("РџРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕСЃС‚СЊ СЃРіРµРЅРµСЂРёСЂРѕРІР°РЅР°!");
         textGen.setForeground(MainFrame.cText);
         textGen.setFont(new java.awt.Font("TimesRoman", Font.BOLD, 18));
         textGen.setBounds((int) MainFrame.screen[0]/4 - (int) MainFrame.screen[0]/8 ,80,
                 (int) MainFrame.screen[0]/4,20);
 
-        butPrint = new JButton("Вывести");
+        butPrint = new JButton("Р’С‹РІРµСЃС‚Рё");
         butPrint.setFont(new java.awt.Font("TimesRoman", Font.PLAIN, 18));
         butPrint.setBorder(BorderFactory.createLineBorder(MainFrame.cBorders,1));
         butPrint.setBackground(MainFrame.cBackBut);
@@ -88,7 +88,7 @@ public class InputTestPanel extends JPanel {
         scrollPane.setBounds((int) MainFrame.screen[0]/3 - (int) MainFrame.screen[0]/5 ,155,
                 (int) MainFrame.screen[0]/4, (int) MainFrame.screen[1]/2 + 50);
 
-        butRes = new JButton("Далее");
+        butRes = new JButton("Р”Р°Р»РµРµ");
         butRes.setFont(new java.awt.Font("TimesRoman", Font.PLAIN, 18));
         butRes.setBorder(BorderFactory.createLineBorder(MainFrame.cBorders,1));
         butRes.setBackground(MainFrame.cBackBut);
@@ -96,8 +96,8 @@ public class InputTestPanel extends JPanel {
         butRes.setBounds( (int) MainFrame.screen[0]/4 - 50, (int) MainFrame.screen[1]/2 + 215,
                 (int) MainFrame.screen[0]/16, 40);
 
-        dialog = new JDialog(Main.frame,"Вывод");
-        dialog.add(new JLabel("        Вывод последовательности"));
+        dialog = new JDialog(Main.frame,"Р’С‹РІРѕРґ");
+        dialog.add(new JLabel("        Р’С‹РІРѕРґ РїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕСЃС‚Рё"));
         dialog.setSize(300,150);
         //dialog.setVisible(true);
         dialog.setLocationRelativeTo(null);
@@ -121,21 +121,21 @@ public class InputTestPanel extends JPanel {
                             repaint();
                             revalidate();
                         }else {
-                            textErr.setText("Введите число не меньше 10000!");
+                            textErr.setText("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ РЅРµ РјРµРЅСЊС€Рµ 10000!!");
                             textErr.setBounds((int) MainFrame.screen[0]/4 - 160,80,
                                     (int) MainFrame.screen[0]/4, 30);
                             add(textErr);
                             revalidate();
                         }
                     } catch (NumberFormatException ex) {
-                        textErr.setText("Введите целое число!");
+                        textErr.setText("Р’РІРµРґРёС‚Рµ С†РµР»РѕРµ С‡РёСЃР»Рѕ!");
                         textErr.setBounds((int) MainFrame.screen[0]/4 - 100,80,
                                 (int) MainFrame.screen[0]/4, 30);
                         add(textErr);
                         revalidate();
                     }
                 }else{
-                    textErr.setText("Введите число!");
+                    textErr.setText("Р’РІРµРґРёС‚Рµ С†РµР»РѕРµ С‡РёСЃР»Рѕ!");
                     textErr.setBounds((int) MainFrame.screen[0]/4 - 100,80,
                             (int) MainFrame.screen[0]/4, 30);
                     add(textErr);
@@ -180,7 +180,6 @@ public class InputTestPanel extends JPanel {
         });
    }
 
-    // Функция генерации и записи последовательности битов
     public void generateAndSaveBitSequence(int n){
         boolean [] bits = new boolean[n];
         Random rand = new Random();
@@ -188,7 +187,6 @@ public class InputTestPanel extends JPanel {
             bits[i] = rand.nextBoolean();
         }
         try (FileWriter writer = new FileWriter("bits.txt")) {
-            // Записываем каждый бит в файл
             for (boolean bit : bits) {
                 writer.write(bit ? "1 " : "0 ");
             }
