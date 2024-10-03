@@ -21,14 +21,14 @@ public class ArbitaryDeviationsPanel extends JPanel {
         setBackground(MainFrame.cFon);
 
         JLabel nameTest = new JLabel();
-        nameTest.setText("Расширенный тест на произвольные отклонения");
+        nameTest.setText("Р Р°СЃС€РёСЂРµРЅРЅС‹Р№ С‚РµСЃС‚ РЅР° РїСЂРѕРёР·РІРѕР»СЊРЅС‹Рµ РѕС‚РєР»РѕРЅРµРЅРёСЏ");
         nameTest.setForeground(MainFrame.cText);
         nameTest.setFont(new java.awt.Font("TimesRoman", Font.BOLD, 24));
         nameTest.setBounds((int) MainFrame.screen[0]/8 - 100,30,
                 (int) MainFrame.screen[0]/2, 40);
         add(nameTest);
 
-        JButton startTestBut = new JButton("Запустить");
+        JButton startTestBut = new JButton("Р—Р°РїСѓСЃС‚РёС‚СЊ");
         startTestBut.setFont(new java.awt.Font("TimesRoman", Font.PLAIN, 16));
         startTestBut.setBorder(BorderFactory.createLineBorder(MainFrame.cBorders,1));
         startTestBut.setBackground(MainFrame.cBackBut);
@@ -38,7 +38,7 @@ public class ArbitaryDeviationsPanel extends JPanel {
         add(startTestBut);
 
         text2 = new JLabel();
-        text2.setText("Статистики: ");
+        text2.setText("РЎС‚Р°С‚РёСЃС‚РёРєРё: ");
         text2.setForeground(MainFrame.cText);
         text2.setFont(new java.awt.Font("TimesRoman", Font.PLAIN, 16));
         text2.setBounds((int) MainFrame.screen[0]/4 - 50,125,
@@ -66,7 +66,7 @@ public class ArbitaryDeviationsPanel extends JPanel {
                 (int) MainFrame.screen[0]/4, 40);
 
 
-        butCont = new JButton("Результаты");
+        butCont = new JButton("Р РµР·СѓР»СЊС‚Р°С‚С‹");
         butCont.setFont(new java.awt.Font("TimesRoman", Font.PLAIN, 18));
         butCont.setBorder(BorderFactory.createLineBorder(MainFrame.cBorders,1));
         butCont.setBackground(MainFrame.cBackBut);
@@ -75,7 +75,7 @@ public class ArbitaryDeviationsPanel extends JPanel {
                 (int) MainFrame.screen[0]/8, 30);
 
 
-        butBack = new JButton("Начать заного");
+        butBack = new JButton("РќР°С‡Р°С‚СЊ Р·Р°РЅРѕРіРѕ");
         butBack.setFont(new java.awt.Font("TimesRoman", Font.PLAIN, 18));
         butBack.setBorder(BorderFactory.createLineBorder(MainFrame.cBorders,1));
         butBack.setBackground(MainFrame.cBackBut);
@@ -92,11 +92,11 @@ public class ArbitaryDeviationsPanel extends JPanel {
                 add(text2);
                 add(answer);
                 if(!check){
-                    textAns.setText("Тест пройден!");
+                    textAns.setText("РўРµСЃС‚ РїСЂРѕР№РґРµРЅ!");
                     add(textAns);
                     add(butCont);
                 }else{
-                    textAns.setText("Тест завален!");
+                    textAns.setText("РўРµСЃС‚ Р·Р°РІР°Р»РµРЅ!");
                     add(textAns);
                     add(butBack);
                 }
@@ -133,7 +133,6 @@ public class ArbitaryDeviationsPanel extends JPanel {
 
 
 
-    // Расширенный тест на произвольные отклонения
     public static String arbitraryDeviationsTest(){
         double [] seq = new double[FrequenceTestPanel.sequence.length];
         for(int i = 0; i < seq.length; i++){
@@ -179,7 +178,7 @@ public class ArbitaryDeviationsPanel extends JPanel {
         StringBuilder ans = new StringBuilder();
         for (int i = 2; i < FrequenceTestPanel.statistics.length; i++) {
             FrequenceTestPanel.statistics[i] = stat.get(i-2).toString();
-            ans.append("Статистика ").append(i - 1).append(": ").
+            ans.append("РЎС‚Р°С‚РёСЃС‚РёРєР° ").append(i - 1).append(": ").
                     append(FrequenceTestPanel.statistics[i]).append("\n");
             if (stat.get(i - 2).compareTo(mainCheck) > 0) {
                 check = true;
