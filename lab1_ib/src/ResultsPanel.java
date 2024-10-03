@@ -10,7 +10,7 @@ public class ResultsPanel extends JPanel {
         setBackground(MainFrame.cFon);
 
         JLabel text1 = new JLabel();
-        text1.setText("Результаты");
+        text1.setText("Р РµР·СѓР»СЊС‚Р°С‚С‹");
         text1.setForeground(MainFrame.cText);
         text1.setFont(new java.awt.Font("TimesRoman", Font.BOLD, 24));
         text1.setBounds((int) MainFrame.screen[0]/4 - 75,15,
@@ -18,7 +18,7 @@ public class ResultsPanel extends JPanel {
         add(text1);
 
         JLabel text2 = new JLabel();
-        text2.setText("Статистики");
+        text2.setText("РЎС‚Р°С‚РёСЃС‚РёРєРё");
         text2.setForeground(MainFrame.cText);
         text2.setFont(new java.awt.Font("TimesRoman", Font.PLAIN, 18));
         text2.setBounds((int) MainFrame.screen[0]/4 - 50,50,
@@ -38,7 +38,7 @@ public class ResultsPanel extends JPanel {
         res.setForeground(MainFrame.cText);
         add(res);
 
-        JButton butBack = new JButton("Начать заного");
+        JButton butBack = new JButton("РќР°С‡Р°С‚СЊ Р·Р°РЅРѕРіРѕ");
         butBack.setFont(new java.awt.Font("TimesRoman", Font.PLAIN, 18));
         butBack.setBorder(BorderFactory.createLineBorder(MainFrame.cBorders,1));
         butBack.setBackground(MainFrame.cBackBut);
@@ -63,9 +63,9 @@ public class ResultsPanel extends JPanel {
 
     public static String printResults(){
         StringBuilder str = new StringBuilder();
-        str.append("Частотный тест: ").append(FrequenceTestPanel.statistics[0]).append("\n");
-        str.append("Тест на последовательность одинаковых бит: ").append(FrequenceTestPanel.statistics[1]).append("\n");
-        str.append("Расширенный тест на произвольные отклонения:\n");
+        str.append("Р§Р°СЃС‚РѕС‚РЅС‹Р№ С‚РµСЃС‚: ").append(FrequenceTestPanel.statistics[0]).append("\n");
+        str.append("РўРµСЃС‚ РЅР° РїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕСЃС‚СЊ РѕРґРёРЅР°РєРѕРІС‹С… Р±РёС‚: ").append(FrequenceTestPanel.statistics[1]).append("\n");
+        str.append("Р Р°СЃС€РёСЂРµРЅРЅС‹Р№ С‚РµСЃС‚ РЅР° РїСЂРѕРёР·РІРѕР»СЊРЅС‹Рµ РѕС‚РєР»РѕРЅРµРЅРёСЏ:\n");
         for(int i = 2; i < FrequenceTestPanel.statistics.length; i++){
             str.append(i-1).append(": ").append(FrequenceTestPanel.statistics[i]).append("\n");
         }
